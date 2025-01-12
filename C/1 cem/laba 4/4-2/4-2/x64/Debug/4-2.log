@@ -1,0 +1,5 @@
+﻿  main.c
+D:\program\C\laba 4\4-2\4-2\main.c(25,9): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+D:\program\C\laba 4\4-2\4-2\main.c(25,15): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+D:\program\C\laba 4\4-2\4-2\main.c(28,27): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  4-2.vcxproj -> D:\program\C\laba 4\4-2\x64\Debug\4-2.exe

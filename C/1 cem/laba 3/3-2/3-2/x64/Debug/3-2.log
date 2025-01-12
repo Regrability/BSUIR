@@ -1,0 +1,6 @@
+﻿  main.c
+D:\Programs\C\laba 3\3-2\3-2\main.c(36,10): warning C4098: ydalenie: функция типа "void", возвращающая значение
+D:\Programs\C\laba 3\3-2\3-2\main.c(50,3): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Programs\C\laba 3\3-2\3-2\main.c(50,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Programs\C\laba 3\3-2\3-2\main.c(52,13): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  3-2.vcxproj -> D:\Programs\C\laba 3\3-2\x64\Debug\3-2.exe

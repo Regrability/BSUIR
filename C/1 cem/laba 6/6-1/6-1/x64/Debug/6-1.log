@@ -1,0 +1,4 @@
+﻿  main.c
+D:\program\C\laba 6\6-1\6-1\main.c(4,11): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\program\C\laba 6\6-1\6-1\main.c(7,9): warning C4101: i: неиспользованная локальная переменная
+  6-1.vcxproj -> D:\program\C\laba 6\6-1\x64\Debug\6-1.exe

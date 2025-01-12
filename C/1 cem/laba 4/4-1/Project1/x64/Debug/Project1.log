@@ -1,0 +1,7 @@
+﻿  main.c
+C:\Users\neketa300\Desktop\roman\C\laba 4\4-1\Project1\main.c(25,9): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\neketa300\Desktop\roman\C\laba 4\4-1\Project1\main.c(25,15): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\neketa300\Desktop\roman\C\laba 4\4-1\Project1\main.c(28,27): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\neketa300\Desktop\roman\C\laba 4\4-1\Project1\main.c(64,13): warning C4098: nyli: функция типа "void", возвращающая значение
+C:\Users\neketa300\Desktop\roman\C\laba 4\4-1\Project1\main.c(101,13): warning C4098: maks: функция типа "void", возвращающая значение
+  Project1.vcxproj -> C:\Users\neketa300\Desktop\roman\C\laba 4\4-1\x64\Debug\Project1.exe

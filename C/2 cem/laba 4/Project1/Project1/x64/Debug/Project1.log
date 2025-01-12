@@ -1,0 +1,9 @@
+﻿  main.c
+D:\program\C\2 cem\laba 4\Project1\Project1\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+D:\program\C\2 cem\laba 4\Project1\Project1\Roma.h(33,13): warning C4098: print_movies_info: функция типа "void", возвращающая значение
+D:\program\C\2 cem\laba 4\Project1\Project1\Roma.h(38,22): warning C4013: vvod: нет определения; предполагается "extern" с возвратом типа "int"
+D:\program\C\2 cem\laba 4\Project1\Project1\Roma.h(50,13): warning C4098: input_film_info: функция типа "void", возвращающая значение
+D:\program\C\2 cem\laba 4\Project1\Project1\Roma.h(66,13): warning C4098: find_new_movies: функция типа "void", возвращающая значение
+D:\program\C\2 cem\laba 4\Project1\Project1\Roma.h(95,13): warning C4098: remove_movies: функция типа "void", возвращающая значение
+D:\program\C\2 cem\laba 4\Project1\Project1\main.c(16,89): warning C4133: =: несовместимые типы - из "movie *" в "Movie *"
+  Project1.vcxproj -> D:\program\C\2 cem\laba 4\Project1\x64\Debug\Project1.exe

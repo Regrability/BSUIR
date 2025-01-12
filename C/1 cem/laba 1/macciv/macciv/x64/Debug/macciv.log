@@ -1,0 +1,9 @@
+﻿  main.c
+D:\Programs\C\macciv\macciv\main.c(6,10): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+D:\Programs\C\macciv\macciv\main.c(6,10): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+D:\Programs\C\macciv\macciv\main.c(6,10): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+D:\Programs\C\macciv\macciv\main.c(6,10): message : этот аргумент используется в качестве размера буфера
+D:\Programs\C\macciv\macciv\main.c(7,12): warning C4476: "printf": неизвестный символ поля типа "\xd1" в описателе формата
+D:\Programs\C\macciv\macciv\main.c(7,19): warning C4474: "printf" : для строки формата передано слишком много аргументов
+D:\Programs\C\macciv\macciv\main.c(7,19): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+  macciv.vcxproj -> D:\Programs\C\macciv\x64\Debug\macciv.exe

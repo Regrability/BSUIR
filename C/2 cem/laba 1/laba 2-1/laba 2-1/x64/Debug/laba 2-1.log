@@ -1,0 +1,13 @@
+﻿  main.c
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(33,21): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char **"
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(33,18): warning C4024: fopen_s: различные типы для формального и фактического параметров 2
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(58,21): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char **"
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(58,18): warning C4024: fopen_s: различные типы для формального и фактического параметров 2
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(80,21): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char **"
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(80,18): warning C4024: fopen_s: различные типы для формального и фактического параметров 2
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(99,21): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char **"
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(99,18): warning C4024: fopen_s: различные типы для формального и фактического параметров 2
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(120,21): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char **"
+D:\program\C\2 cem\laba 1\laba 2-1\laba 2-1\Rman.h(120,18): warning C4024: fopen_s: различные типы для формального и фактического параметров 2
+  laba 2-1.vcxproj -> D:\program\C\2 cem\laba 1\laba 2-1\x64\Debug\laba 2-1.exe

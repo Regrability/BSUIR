@@ -1,0 +1,4 @@
+﻿  main.c
+D:\Programs\C\laba 2\laba 2-2\laba 2-2\main.c(22,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Programs\C\laba 2\laba 2-2\laba 2-2\main.c(24,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  laba 2-2.vcxproj -> D:\Programs\C\laba 2\laba 2-2\x64\Debug\laba 2-2.exe

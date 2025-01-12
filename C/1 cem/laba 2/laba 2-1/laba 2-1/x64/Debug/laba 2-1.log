@@ -1,0 +1,3 @@
+﻿  main.c
+D:\Programs\C\laba 2\laba 2-1\laba 2-1\main.c(27,10): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Programs\C\laba 2\laba 2-1\laba 2-1\main.c(11): error C4700: использована неинициализированная локальная переменная "numargs"

@@ -1,0 +1,3 @@
+﻿  main.c
+D:\program\C\2 cem\laba 7\2-7\2-7\main.c(102,11): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+  2-7.vcxproj -> D:\program\C\2 cem\laba 7\2-7\x64\Debug\2-7.exe

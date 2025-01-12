@@ -1,0 +1,6 @@
+﻿  main.c
+D:\program\C\laba 5\5-3\5-2\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+D:\program\C\laba 5\5-3\5-2\Roman.h(29,12): warning C4101: j: неиспользованная локальная переменная
+D:\program\C\laba 5\5-3\5-2\Roman.h(29,9): warning C4101: i: неиспользованная локальная переменная
+D:\program\C\laba 5\5-3\5-2\main.c(6,11): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+  5-2.vcxproj -> D:\program\C\laba 5\5-3\x64\Debug\5-2.exe

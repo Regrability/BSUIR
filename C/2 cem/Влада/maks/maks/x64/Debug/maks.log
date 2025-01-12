@@ -1,0 +1,3 @@
+﻿  main.c
+D:\program\C\2 cem\Влада\maks\maks\main.c(91,11): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+  maks.vcxproj -> D:\program\C\2 cem\Влада\maks\x64\Debug\maks.exe

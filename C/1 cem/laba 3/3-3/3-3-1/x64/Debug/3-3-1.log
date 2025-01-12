@@ -1,0 +1,7 @@
+﻿  main.c
+D:\Programs\C\laba 3\3-3\3-3-1\main.c(24,10): warning C4098: kracivivivod: функция типа "void", возвращающая значение
+D:\Programs\C\laba 3\3-3\3-3-1\main.c(41,10): warning C4098: cymma: функция типа "void", возвращающая значение
+D:\Programs\C\laba 3\3-3\3-3-1\main.c(55,3): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Programs\C\laba 3\3-3\3-3-1\main.c(55,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Programs\C\laba 3\3-3\3-3-1\main.c(58,17): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  3-3-1.vcxproj -> D:\Programs\C\laba 3\3-3\x64\Debug\3-3-1.exe
