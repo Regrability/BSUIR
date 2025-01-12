@@ -1,0 +1,337 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+viewer.com -- emu8086 assembler version: 4.05  
+ 
+[ 21.11.2023  --  16:22:17 ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       .model tiny
+[   2]    0100:                                       .code
+[   3]        :                                       org 100h
+[   4]    0100:                                       Begin:
+[   5]    0100: 60                                    PUSHA
+[   6]    0101: B4 09 BA A8 05 CD 21 B4 09 BA F4 02   print welcome
+                CD 21 B4 09 BA A8 05 CD 21          
+[   7]    0116: E8 AE 00                              call get_file_name
+[   8]    0119:                                       opening_file:
+[   9]    0119: E8 05 01                              call open_file
+[  10]    011C:                                       read_data:
+[  11]    011C: B9 90 01                              mov cx,400
+[  12]    011F: BA 0A 03                              mov dx, offset buffer
+[  13]    0122: B4 3F                                 mov ah, 3Fh
+[  14]    0124: CD 21                                 int 21h
+[  15]    0126: 3D 90 01                              CMP ax, 400
+[  16]    0129: 74 04                                 je not_close
+[  17]    012B: FE 06 B7 05                           inc flag_close
+[  18]    012F:                                       not_close:
+[  19]    012F: 51                                    push cx
+[  20]    0130: 8B C8                                 mov cx, ax
+[  21]    0132: 50                                    push ax
+[  22]    0133: 56                                    push si
+[  23]    0134: BE 0A 03                              mov si, offset buffer
+[  24]    0137:                                       loooop:
+[  25]    0137: 8B 04                                 mov ax, [si]
+[  26]        :                                       
+[  27]    0139: 3C 0A                                 CMP al, 10
+[  28]    013B: 74 02                                 JE stra
+[  29]        :                                       
+[  30]    013D: EB 04                                 JMP not_str
+[  31]    013F:                                       stra:
+[  32]    013F: FF 06 AF 05                           inc count_length
+[  33]    0143:                                       not_str:
+[  34]    0143: 46                                    inc si
+[  35]    0144: E2 F1                                 loop loooop
+[  36]    0146: 5E                                    pop si
+[  37]    0147: 58                                    pop ax
+[  38]    0148: 59                                    pop cx
+[  39]    0149: 80 3E B7 05 01                        CMP flag_close , 1
+[  40]    014E: 74 02                                 je close_file
+[  41]    0150: EB CA                                 jmp short read_data
+[  42]    0152:                                       close_file:
+[  43]    0152: FF 06 AF 05                           inc count_length
+[  44]    0156: A1 AF 05                              mov ax, count_length
+[  45]    0159: A3 AD 05                              mov number, ax
+[  46]    015C: E8 E8 00                              call   output_int
+[  47]    015F: B4 3E                                 mov ah, 3Eh
+[  48]    0161: CD 21                                 int 21h
+[  49]    0163: CD 20                                 int 20h
+[  50]    0165:                                       exit:
+[  51]    0165: 3D 02 00                              CMP ax, 02h
+[  52]    0168: 75 0E                                 JNE next1
+[  53]    016A: B4 09                                 	mov ah,9
+[  54]    016C: BA A8 05                              	mov dx,offset new_line
+[  55]    016F: CD 21                                 	int 21h
+[  56]    0171: B4 09                                 mov ah,9
+[  57]    0173: BA E3 04                              mov dx,offset error1
+[  58]    0176: CD 21                                 int 21h
+[  59]    0178:                                       next1:
+[  60]    0178: 3D 03 00                              CMP ax,03h
+[  61]    017B: 75 0E                                 JNE next2
+[  62]    017D: B4 09                                 	mov ah,9
+[  63]    017F: BA A8 05                              	mov dx,offset new_line
+[  64]    0182: CD 21                                 	int 21h
+[  65]    0184: B4 09                                 mov ah,9
+[  66]    0186: BA F9 04                              mov dx,offset error2
+[  67]    0189: CD 21                                 int 21h
+[  68]    018B:                                       next2:
+[  69]    018B: 3D 04 00                              CMP ax,04h
+[  70]    018E: 75 0E                                 JNE next3
+[  71]    0190: B4 09                                 	mov ah,9
+[  72]    0192: BA A8 05                              	mov dx,offset new_line
+[  73]    0195: CD 21                                 	int 21h
+[  74]    0197: B4 09                                 mov ah,9
+[  75]    0199: BA 0F 05                              mov dx,offset error3
+[  76]    019C: CD 21                                 int 21h
+[  77]    019E:                                       next3:
+[  78]    019E: 3D 05 00                              CMP ax,05h
+[  79]    01A1: 75 0E                                 JNE next4
+[  80]    01A3: B4 09                                 	mov ah,9
+[  81]    01A5: BA A8 05                              	mov dx,offset new_line
+[  82]    01A8: CD 21                                 	int 21h
+[  83]    01AA: B4 09                                 mov ah,9
+[  84]    01AC: BA 29 05                              mov dx,offset error4
+[  85]    01AF: CD 21                                 int 21h
+[  86]    01B1:                                       next4:
+[  87]    01B1: 3D 0C 00                              CMP ax,0Ch
+[  88]    01B4: 75 0E                                 JNE end_exit
+[  89]    01B6: B4 09                                 	mov ah,9
+[  90]    01B8: BA A8 05                              	mov dx,offset new_line
+[  91]    01BB: CD 21                                 	int 21h
+[  92]    01BD: B4 09                                 mov ah,9
+[  93]    01BF: BA 41 05                              mov dx,offset error5
+[  94]    01C2: CD 21                                 int 21h
+[  95]        :                                       
+[  96]    01C4:                                       end_exit:
+[  97]        :                                       
+[  98]    01C4: 61                                    popa
+[  99]    01C5: CD 20                                 int 20h
+[ 100]        :                                       ;//////////////////////////////////////////PRINT///////////////////////////
+[ 101]        :                                       macro print str
+[ 102]        :                                       	mov ah,9
+[ 103]        :                                       	mov dx,offset new_line
+[ 104]        :                                       	int 21h
+[ 105]        :                                       mov ah,9
+[ 106]        :                                       mov dx,offset str
+[ 107]        :                                       int 21h
+[ 108]        :                                       mov ah,9
+[ 109]        :                                       	mov dx,offset new_line
+[ 110]        :                                       	int 21h
+[ 111]        :                                       endm
+[ 112]        :                                       
+[ 113]        :                                       ;//////////////////////////////////////////GET_FILE///////////////////////////
+[ 114]    01C7:                                       get_file_name proc
+[ 115]    01C7: 33 C9                                 xor cx, cx
+[ 116]    01C9: 26 8A 0E 80 00                        mov cl, es:[80h]  ;this adress contains size of cmd
+[ 117]    01CE: 80 F9 00                              cmp cl, 0
+[ 118]    01D1: 74 1A                                 je empty_cmd
+[ 119]    01D3: BF 82 00                              mov di, 82h       ;beginning of cmd
+[ 120]    01D6: BE 9B 04                              lea si, file_name ;start of address
+[ 121]    01D9:                                       get_symbols:
+[ 122]    01D9: 26 8A 05                              mov al, es:[di]
+[ 123]    01DC: 3C 0D                                 cmp al, 0Dh       ;compare with end
+[ 124]    01DE: 75 03 E9 36 FF                        je opening_file
+[ 125]    01E3: 3C 20                                 cmp al, ' '
+[ 126]    01E5: 74 1E                                 je too_many_args
+[ 127]    01E7: 88 04                                 mov [si], al;ds:[si]=es:[di]      file name=param from cmd
+[ 128]    01E9: 47                                    inc di
+[ 129]    01EA: 46                                    inc si
+[ 130]    01EB: EB EC                                 jmp get_symbols
+[ 131]    01ED:                                       empty_cmd:
+[ 132]    01ED: B4 09 BA A8 05 CD 21 B4 09 BA 6C 05   print empty_cmd_message
+                CD 21 B4 09 BA A8 05 CD 21          
+[ 133]    0202: E9 60 FF                              jmp exit
+[ 134]    0205:                                       too_many_args:
+[ 135]    0205: B4 09 BA A8 05 CD 21 B4 09 BA 8D 05   print too_many_message
+                CD 21 B4 09 BA A8 05 CD 21          
+[ 136]    021A: E9 48 FF                              jmp exit
+[ 137]    021D: C6 04 00                              mov [si], 0
+[ 138]        :                                       
+[ 139]    0220: C3                                    ret
+[ 140]        :                                       get_file_name endp
+[ 141]        :                                       ;//////////////////////////////////////////OPEN_FILE///////////////////////////
+[ 142]    0221:                                       open_file proc
+[ 143]        :                                       
+[ 144]    0221: BA 9B 04                              mov dx, offset file_name   ;address ASCIZ-string with name
+[ 145]    0224: B4 3D                                 mov ah, 3Dh             ;DOS 3Dh
+[ 146]    0226: B0 00                                 mov al, 00h             ;00 - only reading 0 000 00 0
+[ 147]    0228: CD 21                                 int 21h                 ;open file
+[ 148]    022A: 73 03 E9 36 FF                        jc exit                 ;if error - exit
+[ 149]    022F: 8B D8                                 mov bx, ax              ;bx - identefy file
+[ 150]        :                                       ;mov di, 01              ;di identify STDOUT (screen)
+[ 151]    0231: B4 09 BA A8 05 CD 21 B4 09 BA 5C 05   print open_message
+                CD 21 B4 09 BA A8 05 CD 21          
+[ 152]    0246: C3                                    ret
+[ 153]        :                                       open_file endp
+[ 154]        :                                       
+[ 155]        :                                       ;//////////////////////////////////////////OUTPUT_INT///////////////////////////
+[ 156]    0247:                                       output_int proc near USES cx,dx,ax
+[ 157]    0247: 60                                    pusha
+[ 158]    0248: C7 06 B1 05 00 00                     mov sign_number,0
+[ 159]    024E: 83 3E AD 05 00                        CMP number, 0
+[ 160]    0253: 74 6B                                 JE number_zero
+[ 161]    0255: 7C 02                                 JL out_negative                  ;number <0
+[ 162]    0257: EB 0E                                 JMP out_NOT_negative             ;number >0
+[ 163]        :                                       
+[ 164]    0259:                                       out_negative:
+[ 165]    0259: C7 06 B1 05 01 00                     mov sign_number,1  ;number negative
+[ 166]    025F: A1 AD 05                              mov ax, number
+[ 167]    0262: F7 D8                                 NEG ax
+[ 168]    0264: A3 AD 05                              mov number, ax
+[ 169]    0267:                                       out_NOT_negative:
+[ 170]    0267: 33 C0                                 xor ax,ax
+[ 171]    0269: B9 05 00                              mov cx, 5
+[ 172]    026C: 33 F6                                 xor si,si
+[ 173]    026E: 33 D2                                 xor dx,dx
+[ 174]    0270: 33 DB                                 xor bx,bx
+[ 175]    0272: 83 3E B1 05 01                        CMP  sign_number,1
+[ 176]    0277: 74 02                                 JE out_neg
+[ 177]    0279: EB 0E                                 JMP output
+[ 178]    027B:                                       out_neg:
+[ 179]    027B: C6 06 DF 05 2D                        mov symbol_out , '-'
+[ 180]    0280: 33 C0                                 xor ax,ax
+[ 181]    0282: B4 09                                 mov ah,9
+[ 182]    0284: BA DF 05                              mov dx,offset symbol_out
+[ 183]    0287: CD 21                                 int 21h
+[ 184]    0289:                                       output:
+[ 185]    0289: 33 D2                                 xor dx,dx
+[ 186]    028B: 33 C0                                 xor ax,ax
+[ 187]    028D: 83 3E AD 05 00                        CMP number, 0
+[ 188]    0292: 74 43                                 JE end_output
+[ 189]    0294: A1 AD 05                              mov AX,number
+[ 190]    0297: C7 06 B3 05 0A 00                     mov del, 10
+[ 191]        :                                       
+[ 192]    029D: F7 3E B3 05                           IDIV del
+[ 193]    02A1: 88 16 DF 05                           mov symbol_out , dl
+[ 194]    02A5: A3 AD 05                              mov number, ax
+[ 195]        :                                       
+[ 196]    02A8: 80 06 DF 05 30                        add symbol_out, 30h
+[ 197]    02AD: 33 DB                                 xor bx,bx
+[ 198]    02AF: BB D8 05                              mov bx, offset output_mass
+[ 199]    02B2: 4B                                    dec bx ;sub bx
+[ 200]    02B3: 33 C0                                 xor ax,ax
+[ 201]    02B5: A0 DF 05                              mov al,symbol_out
+[ 202]    02B8: 8B F1                                 mov si, cx
+[ 203]    02BA: 88 00                                 mov [bx][si] ,al
+[ 204]    02BC: E2 CB                                 loop output
+[ 205]    02BE: EB 17                                 JMP end_output
+[ 206]    02C0:                                       number_zero:
+[ 207]    02C0: C6 06 DF 05 30                        mov symbol_out, '0'
+[ 208]    02C5: 33 C0                                 xor ax,ax
+[ 209]    02C7: B4 09                                 mov ah,9
+[ 210]    02C9: BA DF 05                              mov dx,offset symbol_out
+[ 211]    02CC: CD 21                                 int 21h
+[ 212]    02CE: B4 09                                 mov ah,9
+[ 213]    02D0: BA B8 05                              mov dx,offset new_number
+[ 214]    02D3: CD 21                                 int 21h
+[ 215]    02D5: EB 1B                                 JMP END
+[ 216]    02D7:                                       end_output:
+[ 217]    02D7: 33 DB                                 xor bx,bx
+[ 218]    02D9: BB D8 05                              mov bx, offset output_mass
+[ 219]    02DC: C6 47 05 24                           mov [bx+5] ,'$'
+[ 220]    02E0: 33 C0                                 xor ax,ax
+[ 221]    02E2: B4 09                                 mov ah,9
+[ 222]    02E4: BA D8 05                              mov dx,offset output_mass
+[ 223]    02E7: 03 D1                                 add dx, cx     ;offset due to the number of elements(0 in begin str)
+[ 224]    02E9: CD 21                                 int 21h
+[ 225]    02EB: B4 09                                 mov ah,9
+[ 226]    02ED: BA B8 05                              mov dx,offset new_number
+[ 227]    02F0: CD 21                                 int 21h
+[ 228]    02F2:                                       END:
+[ 229]    02F2: 61                                    	popa
+[ 230]    02F3: C3                                    ret
+[ 231]        :                                       output_int endp
+[ 232]        :                                       
+[ 233]    02F4: 48 65 6C 6C 6F 21 20 50 72 6F 67 72   welcome db 'Hello! Program start!$'
+                61 6D 20 73 74 61 72 74 21 24       
+[ 234]    030A: 24 24 24 24 24 24 24 24 24 24 24 24   buffer db 401 DUP ('$')
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24                      
+[ 235]        :                                       file_name_size equ 70
+[ 236]    049B: 24 24 24 24 24 24 24 24 24 24 24 24   file_name db file_name_size dup('$')
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24       
+[ 237]    04E1: 00 00                                 argc dw 0
+[ 238]    04E3: 45 52 52 4F 52 31 3A 46 49 4C 45 20   error1 db 'ERROR1:FILE NOT FOUND$'
+                4E 4F 54 20 46 4F 55 4E 44 24       
+[ 239]    04F9: 45 52 52 4F 52 32 3A 50 41 54 48 20   error2 db 'ERROR2:PATH NOT FOUND$'
+                4E 4F 54 20 46 4F 55 4E 44 24       
+[ 240]    050F: 45 52 52 4F 52 33 3A 54 4F 4F 20 4D   error3 db 'ERROR3:TOO MANY OPEN FILE$'
+                41 4E 59 20 4F 50 45 4E 20 46 49 4C 
+                45 24                               
+[ 241]    0529: 45 52 52 4F 52 34 3A 41 43 43 45 53   error4 db 'ERROR4:ACCESS IS DENIED$'
+                53 20 49 53 20 44 45 4E 49 45 44 24 
+                                                    
+[ 242]    0541: 45 52 52 4F 52 35 3A 49 4E 56 41 4C   error5 db 'ERROR5:INVALID ACCESS MODE$'
+                49 44 20 41 43 43 45 53 53 20 4D 4F 
+                44 45 24                            
+[ 243]    055C: 46 69 6C 65 20 77 61 73 20 6F 70 65   open_message db 'File was opened$'
+                6E 65 64 24                         
+[ 244]    056C: 63 6D 64 20 69 73 20 65 6D 70 74 79   empty_cmd_message db 'cmd is empty...Nothing to handle$'
+                2E 2E 2E 4E 6F 74 68 69 6E 67 20 74 
+                6F 20 68 61 6E 64 6C 65 24          
+[ 245]    058D: 54 6F 6F 20 6D 61 6E 79 20 61 72 67   too_many_message db 'Too many args were entered$'
+                73 20 77 65 72 65 20 65 6E 74 65 72 
+                65 64 24                            
+[ 246]    05A8: 0D 0A 24                              new_line db 13,10,'$'
+[ 247]    05AB: 00 00                                 count dw 0
+[ 248]    05AD: 00 00                                 number dw 0
+[ 249]    05AF: 00 00                                 count_length dw 0
+[ 250]    05B1: 00 00                                 sign_number dw 0
+[ 251]    05B3: 01 00                                 del dw 1
+[ 252]    05B5: 00 00                                 buf dw 0
+[ 253]    05B7: 00                                    flag_close db 0
+[ 254]    05B8: 09 20 24                              new_number db 9,32, '$'
+[ 255]    05BB: 73 74 72 69 6E 67 73 20 69 6E 20 66   str db 'strings in file!'
+                69 6C 65 21                         
+[ 256]    05CB: 50 72 6F 67 72 61 6D 20 65 6E 64 21   end_program db 'Program end!$'
+                24                                  
+[ 257]    05D8: 30 30 30 30 30 24 24                  output_mass db '0', '0', '0', '0', '0', '$', '$'
+[ 258]    05DF: 00 24                                 symbol_out db  ?,'$'
+[ 259]        :                                       end Begin
+[ 260]        :                                       
+[ 261]        :                                       
+ 
+===================================================================================================
+ 
+
+
+
+
+===================================================================================================

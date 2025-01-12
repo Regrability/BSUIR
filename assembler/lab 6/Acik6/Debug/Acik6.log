@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\acik\lab 6\Acik6\main.cpp(2,9): warning C4081: требуется "идентификатор"; обнаружен "inline"
+D:\acik\lab 6\Acik6\main.cpp(7,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Acik6.vcxproj -> D:\acik\lab 6\Acik6\Debug\Acik6.exe
