@@ -1,0 +1,17 @@
+﻿  Accessories.cpp
+  Clothing.cpp
+  Computer.cpp
+  Electronics.cpp
+  Footwear.cpp
+  Item.cpp
+  main.cpp
+  Menu.cpp
+  Menu.h
+  MyAlgoritms.cpp
+  MyFile.h
+  MyVvod.cpp
+  Stack.cpp
+  Telephone.cpp
+  Создание кода...
+x64\Debug\Menu.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
+  Kyrsova.vcxproj -> D:\C++\курсач\Kyrsova\x64\Debug\Kyrsova.exe

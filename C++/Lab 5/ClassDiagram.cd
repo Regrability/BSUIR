@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Person">
+    <Position X="2" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAAAAwAQDAAAQIAAAAAAAAAAAAJEAAAAAAQAA=</HashCode>
+      <FileName>Person.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entrepreneur">
+    <Position X="0.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAQwIAAAAAAAAAAAAAAIAAAYQCACACMAAEA=</HashCode>
+      <FileName>Entrepreneur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tourist">
+    <Position X="3" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAAAQwAACYAAAAMQAEAAAAAAEAAAAAAAAAIgA=</HashCode>
+      <FileName>Tourist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business">
+    <Position X="2" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAgAIAAAEAwAAAABAAAAACAAAAAACAAABAAgAAAAAA=</HashCode>
+      <FileName>Business.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyException">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAAAAAAAAAAAAACAAAAAAAAAQIAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntException">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringException">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoubleException">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileError">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu&lt;T&gt;">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAgAAAAAgAAAAAAAAAAAABJAAAIAAAAAAAAAAAAI=</HashCode>
+      <FileName>Menu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StackList&lt;T&gt;">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAQAAACAAAAAAAIgAEBECAA=</HashCode>
+      <FileName>Stack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TaxPayment">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entrepreneur.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BorderCrossing">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAA=</HashCode>
+      <FileName>Tourist.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NodeStack&lt;T&gt;">
+    <Position X="12" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Stack.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

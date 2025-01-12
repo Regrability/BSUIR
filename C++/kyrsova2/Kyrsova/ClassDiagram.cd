@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Item">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAgACAACAIAAAAEQAAEACBAAIAMAAAAAAA=</HashCode>
+      <FileName>Item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Electronics">
+    <Position X="8.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIAICAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Electronics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Telephone">
+    <Position X="10" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgIAABAAAAAgAAAAAABAAAAAQAAAAAAABIAAAAAgAAA=</HashCode>
+      <FileName>Telephone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Computer">
+    <Position X="7.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAABAAAAAgAAAAAQAAAAAAQAAAABAAAAAAAAIQAAI=</HashCode>
+      <FileName>Computer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clothing">
+    <Position X="4.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAIAAAAgAQIAAAAAAAAQAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Clothing.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Footwear">
+    <Position X="5.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAiAAAAAAAAAAAAQRABAACAAAAAgAAIAAA=</HashCode>
+      <FileName>Footwear.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accessories">
+    <Position X="3.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEAABAAAAAgAAAAAIAAAAAAQAEUAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Accessories.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyException">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAAAAAAAAAAAAACAAAAAAAAAQIAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntException">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringException">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoubleException">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileError">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyFile&lt;T&gt;">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACACAAAAAAAAAAAAAQAAAABAAQA=</HashCode>
+      <FileName>MyFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StackList&lt;T1, T2, T3, T4&gt;">
+    <Position X="15.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAIAABAQAACAAAAAAAIgAEBACAA=</HashCode>
+      <FileName>Stack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StackListIterator&lt;T1, T2, T3, T4&gt;">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAhAAAAAAAQAAAAQAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Iterator_Stack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu&lt;T&gt;">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAgAAAIAQAAAAAEgIAAAAAABAAAAAAAEAI=</HashCode>
+      <FileName>Menu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="NodeStack&lt;T1, T2, T3, T4&gt;">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAIAAQA=</HashCode>
+      <FileName>Iterator_Stack.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

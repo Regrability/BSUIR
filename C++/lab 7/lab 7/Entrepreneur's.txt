@@ -1,0 +1,9 @@
+aaaaaa	aaaaaaaa	2000	aaaa
+0
+bbb	bbbbb	2000	bbbbbbb
+0
+cccccc	cccc	2000	ccccccccc
+0
+qwer	qwe	2000	qwe
+1
+11	1234
