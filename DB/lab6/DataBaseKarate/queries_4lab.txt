@@ -1,0 +1,41 @@
+1. Выбрать всех учеников, которым больше 21 года:
+SELECT * FROM student WHERE age > 21;
+
+2. Выбрать все клубы стиля кёкусинкай и отсортировать по алфавиту:
+SELECT * FROM club WHERE karate_style = 'кёкусинкай' ORDER BY name_club ASC;
+
+3. Найти тренеров, у которых фамилия начинается на 'К':
+SELECT * FROM coach WHERE name_coach LIKE 'К%';
+
+4. Найти тренеров, у которых имя начинается на 'Л' и опыт больше 10 лет:
+SELECT * FROM coach WHERE name_coach LIKE 'Л%' AND experience > 10;
+
+5. Выбрать все клубы с их тренерами:
+SELECT cl.name_club, co.name_coach, co.mastery_level_coach FROM club cl INNER JOIN coach co ON co.club_id_coach = cl.id;
+
+6. Выбрать все клубы и их мероприятия типа 'кумите':
+SELECT cl.name_club, ev.name_event, ev.type_event FROM club cl INNER JOIN event ev ON ev.club_id_event = cl.id WHERE type_event = 'кумите';
+
+7. Получить список мест проведения мероприятия, где вместимость больше 300 и уровень 'международный':
+SELECT e.name_event, l.address, l.capacity, e.level FROM event_location l LEFT JOIN event e ON e.evenlocation_id_event = l.id WHERE capacity > 300 AND level = 'международный';
+
+8. Вывести список студентов, у которых ежемесячный платёж больше 50 и у которых 8 кю:
+SELECT s.fullname_stydent, s.mastery_level_student, p.amount FROM student s LEFT JOIN payment p ON p.student_id_payment = s.id WHERE amount > 50 AND mastery_level_student = '8 кю';
+
+9. Вывести места проведения мероприятий по вместимости (возрастание):
+SELECT * FROM event_location ORDER BY capacity ASC;
+
+10. Вывести список тренеров, отсортированный по поясам (возрастание) и фамилии (убывание):
+SELECT * FROM coach ORDER BY mastery_level_coach ASC, name_coach DESC;
+
+11. Вывести список тренеров, которые проводят боевые тренировки:
+SELECT coach.name_coach, coach.phone_number, workout.type, workout.group_name FROM coach RIGHT JOIN workout ON workout.coach_id_workout = coach.id WHERE workout.type = 'боевая';
+
+12. Вывести все клубы и все мероприятия типа 'кате', включая клубы без мероприятий:
+SELECT c.name_club, c.karate_style, e.name_event, e.type_event FROM club c FULL JOIN event e ON c.id = e.club_id_event WHERE e.type_event = 'кате';
+
+13. Вывести всех тренеров и всех учеников, у которых вес меньше 80 кг:
+SELECT c.name_coach AS coach_name, s.fullname_stydent AS student_name, s.weight FROM coach c FULL JOIN student s ON c.id = s.coach_id_student WHERE s.weight < 80 OR s.weight IS NULL;
+
+14. Получить список возможных учеников на мероприятия типа 'кумите' в возрасте 18 лет:
+SELECT s.fullname_stydent, e.name_event, e.type_event FROM student s CROSS JOIN event e WHERE e.type_event = 'кумите' AND s.age = 18;

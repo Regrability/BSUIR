@@ -1,0 +1,41 @@
+1. Группировка по стилю карате и подсчет количества клубов с таким стилем:
+SELECT karate_style, COUNT(*) AS club_count FROM public.club GROUP BY karate_style;
+
+2. Группировка по мастерству тренеров и подсчет суммы их зарплат:
+SELECT mastery_level_coach, SUM(salary) AS total_salary FROM public.coach GROUP BY mastery_level_coach;
+
+3. Группировка по типу тренировок и расчет количества учеников, которые их посещают:
+SELECT w.type, COUNT(sw.student_key) AS student_count FROM public.workout w JOIN public.student_workout sw ON w.id = sw.workout_key GROUP BY w.type;
+
+4. Группировка по типу мероприятия и расчет количества учеников, которые их посещают (возраст < 20):
+SELECT e.type_event, COUNT(se.student_key) AS student_count FROM public.event e JOIN public.student_event se ON e.id = se.event_key JOIN public.student s ON se.student_key = s.id WHERE s.age < 20 GROUP BY e.type_event;
+
+5. Выборка по типу оплаты и расчет количества учеников, которые так платят:
+SELECT type_payment, COUNT(DISTINCT student_id_payment) AS student_count FROM public.payment GROUP BY type_payment;
+
+6. Выбор клубов, участвующих в мероприятиях уровня «международный»:
+SELECT c.name_club FROM public.club c JOIN public.event e ON c.id = e.club_id_event WHERE e.level = 'международный' GROUP BY c.name_club;
+
+7. Выбор мест проведения мероприятия, у которых вместимость больше средней:
+SELECT el.id, el.address, el.capacity FROM public.event_location el GROUP BY el.id, el.address, el.capacity HAVING el.capacity > (SELECT AVG(capacity) FROM public.event_location);
+
+8. Группировка по мастерству тренеров и сортировка по возрастанию:
+SELECT mastery_level_coach, COUNT(*) AS coach_count FROM public.coach GROUP BY mastery_level_coach ORDER BY mastery_level_coach ASC;
+
+9. Группировка по возрасту учеников и подсчет количества мероприятий, в которых они приняли участие:
+SELECT s.age, COUNT(se.event_key) AS event_count FROM public.student s JOIN public.student_event se ON s.id = se.student_key GROUP BY s.age;
+
+10. Вывести мероприятия, у которых цена аренды места проведения больше 600:
+SELECT e.id, e.type_event, e.date_event, e.level FROM public.event e JOIN public.event_location el ON e.evenlocation_id_event = el.id GROUP BY e.id, e.type_event, e.date_event, e.level, el.price HAVING el.price > 600;
+
+11. Группировка по группе тренировок с указанием количества тренеров, которые проводят эти тренировки:
+SELECT w.group_name, COUNT(DISTINCT w.coach_id_workout) AS coach_count FROM public.workout w GROUP BY w.group_name;
+
+12. Группировка по уровню мастерства учеников и подсчет их количества:
+SELECT mastery_level_student, COUNT(*) AS student_count FROM public.student GROUP BY mastery_level_student;
+
+13. Выборка по спонсорам мероприятий и подсчет количества мероприятий, которые они спонсировали:
+SELECT sponsor, COUNT(*) AS event_count FROM public.event GROUP BY sponsor;
+
+14. Группировка по количеству учеников у тренера (только имя тренера и количество учеников):
+SELECT c.name_coach, COUNT(s.id) AS student_count FROM public.coach c LEFT JOIN public.student s ON c.id = s.coach_id_student GROUP BY c.name_coach;

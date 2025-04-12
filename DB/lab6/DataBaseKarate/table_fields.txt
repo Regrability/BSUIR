@@ -1,0 +1,8 @@
+student: fullname_student, age, weight, mastery_level_student, coach_id_student
+coach: name_coach, experience, phone_number, mastery_level_coach, club_id_coach
+club: name_club, foundation_data, email_club, karate_style
+event: name_event, type_event, level, sponsor, club_id_event, evenlocation_id_event, date_event
+event_location: price, address, capacity, area
+payment: email_payment, amount, erip_number, student_id_payment, type_payment
+workout: type, hall_address, date_time, group_name, coach_id_workout
+
