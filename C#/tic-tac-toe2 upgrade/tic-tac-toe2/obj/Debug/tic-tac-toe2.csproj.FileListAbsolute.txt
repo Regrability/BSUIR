@@ -1,0 +1,15 @@
+D:\tic-tac-toe2\tic-tac-toe2\bin\Debug\tic-tac-toe2.exe.config
+D:\tic-tac-toe2\tic-tac-toe2\bin\Debug\tic-tac-toe2.exe
+D:\tic-tac-toe2\tic-tac-toe2\bin\Debug\tic-tac-toe2.pdb
+D:\tic-tac-toe2\tic-tac-toe2\obj\Debug\tic-tac-toe2.csproj.AssemblyReference.cache
+D:\tic-tac-toe2\tic-tac-toe2\obj\Debug\tic-tac-toe2.csproj.SuggestedBindingRedirects.cache
+D:\tic-tac-toe2\tic-tac-toe2\obj\Debug\tic-tac-toe2.csproj.CoreCompileInputs.cache
+D:\tic-tac-toe2\tic-tac-toe2\obj\Debug\tic-tac-toe2.exe
+D:\tic-tac-toe2\tic-tac-toe2\obj\Debug\tic-tac-toe2.pdb
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\bin\Debug\tic-tac-toe2.exe.config
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\bin\Debug\tic-tac-toe2.exe
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\bin\Debug\tic-tac-toe2.pdb
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\obj\Debug\tic-tac-toe2.csproj.AssemblyReference.cache
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\obj\Debug\tic-tac-toe2.csproj.CoreCompileInputs.cache
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\obj\Debug\tic-tac-toe2.exe
+D:\C#\tic-tac-toe2 Егор\tic-tac-toe2\obj\Debug\tic-tac-toe2.pdb
