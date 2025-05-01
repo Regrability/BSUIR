@@ -1,0 +1,8 @@
+Welcome to our server!
+Here are some commands you can use:
+ECHO - write message to server
+INFO - Get server information
+CD <directory> - Change current directory
+LIST - List files in the current directory
+QUIT - Disconnect from the server
+
